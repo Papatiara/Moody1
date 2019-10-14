@@ -8,40 +8,41 @@ class Input  extends React.Component {
     super(props);
 
     this.state = {
-      value: " ",
+      value: "",
       hasValue: false
     };
       this.handleChange = this.handleChange.bind(this); 
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 	handleChange(event) {
-    console.log(event.target.value)
 	  this.setState({value: event.target.value});
   }
 
   handleSubmit(event){
-    console.log(this.state.value)
-    if (this.state.value) {
-	  this.setState({hasValue: true});
-    }
+    if (this.state.value.length === 0) {
+      alert('The input requires a value');
+     } else {
+      this.setState({hasValue: true});
+     }
    }
+   
   
-  render() {
-    if (this.state.hasValue === true) {
-      return (
-    <div>
-      <Reviewtext value={this.state.value}/>
-    </div>
+render() {
+  if (this.state.hasValue === true) {
+    return (
+      <div>
+        <Reviewtext value={this.state.value}/>
+      </div>
     )
   }
     return (
     <div>
       <form >
         <label>
-          <TextareaAutosize value={this.state.value} onChange={this.handleChange}/>
+          <TextareaAutosize value={this.state.value} onChange={this.handleChange} />
         </label>
       </form>
-      <input value="Submit" onClick={this.handleSubmit}/>
+      <input className="input" value="Submit" onClick={this.handleSubmit}/>
     </div>
     );
   }
