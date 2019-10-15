@@ -6,13 +6,15 @@ import Input from './Input';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <div className="App-header">
-          <img src={background} className="App-logo" alt="logo" />
-            <h2>Moody</h2>
+            <h3 className="App-title"> Moody</h3>
+            <h3 className="App-contact">Contact</h3>
       </div>
         <p className="App-intro">
-          Moody is an interactive way to analyze sentiments behind the text. Enter any piece of text below and try it out!
+          Moody is an interactive way to analyze sentiments behind the text.
+          
+          Enter any piece of text below and try it out!
        </p>
       <Input />
       </div>

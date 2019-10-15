@@ -36,13 +36,13 @@ render() {
     )
   }
     return (
-    <div>
+    <div className="wrapper">
       <form >
         <label>
-          <TextareaAutosize value={this.state.value} onChange={this.handleChange} />
+          <TextareaAutosize className="text-area" value={this.state.value} onChange={this.handleChange} />
+          <input className="input" value="Submit" onClick={this.handleSubmit}/>
         </label>
       </form>
-      <input className="input" value="Submit" onClick={this.handleSubmit}/>
     </div>
     );
   }
