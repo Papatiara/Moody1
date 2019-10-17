@@ -23,10 +23,10 @@ render() {
   }
   return (
     <div>
-      <h1> Please review your text: </h1>
-      <p> {this.props.value} </p>
-      <input className="input" value="Confirm"/>
-      <input className="input" value="Edit" onClick={this.handleEdit}/>
+      <h1 className="reviewText"> Please review your text: </h1>
+      <p className="input-value"> {this.props.value} </p>
+      <input className="edit" value="Confirm"/>
+      <input className="confirm" value="Edit" onClick={this.handleEdit}/>
     </div>
   );
   }

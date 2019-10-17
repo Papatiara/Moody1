@@ -21,6 +21,8 @@ class Input  extends React.Component {
   handleSubmit(event){
     if (this.state.value.length === 0) {
       alert('The input requires a value');
+     } if (this.state.value.length < 20) {
+       alert('The input should have at least 20 characters')
      } else {
       this.setState({hasValue: true});
      }
@@ -36,6 +38,13 @@ render() {
     )
   }
     return (
+  <div>
+    <div>
+      <p className="App-intro">
+          Moody is an interactive way to analyze sentiments behind the text.
+          Enter any piece of text below and try it out!
+       </p>
+    </div>
     <div className="wrapper">
       <form >
         <label>
@@ -44,6 +53,7 @@ render() {
         </label>
       </form>
     </div>
+  </div>
     );
   }
 }
