@@ -1,19 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import {
+  PieChart, Pie, Legend, Tooltip,
+} from 'recharts';
 
-class App extends Component {
+class Charts  extends React.Component {
+  constructor(props) {
+    super(props);
+}
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Consegui instalar o react</h2>
-        </div>
-        <p className="App-intro">
-          Cu
-        </p>
-      </div>
+      <PieChart width={400} height={400}>
+        <Pie dataKey="value" isAnimationActive={false} data={this.props.data} cx={200} cy={200} outerRadius={80} fill="#8884d8" label />
+        <Tooltip />
+      </PieChart>
     );
   }
 }
+
+
+export default Charts;
