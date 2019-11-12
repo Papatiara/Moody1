@@ -46,8 +46,8 @@ render() {
       <div>
         <div className="Intro-content">
           <div className="Intro-content-item Intro-description">
-              Moody is an interactive way to analyze sentiments behind the text.
-              Enter any piece of text and try it out!
+              Moody is an interactive way to analyze sentiment behind text.
+              Enter any text and try it out!
           </div>
           <div className="Intro-content-item">
             <TextareaAutosize className="Intro-form" value={this.state.value} onChange={this.handleChange} onClick={this.handleClick}/>
