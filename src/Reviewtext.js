@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Input from './Input';
+import Intro from './Intro';
 import Request from './Request';
 
 
@@ -22,7 +22,7 @@ render() {
   if (this.state.edit === true) {
     return (
       <div>
-        <Input />
+        <Intro />
       </div>
     )
   }
@@ -35,10 +35,10 @@ render() {
   }
   return (
     <div>
-      <h1 className="reviewText"> Please review your text: </h1>
-      <p className="input-value"> {this.props.value} </p>
-      <input className="confirm" value="Confirm" onClick={this.handleConfirm}/>
-      <input className="edit" value="Edit" onClick={this.handleEdit}/>
+      <h1 className="Review-input"> Please review your text: </h1>
+      <p className="Review-value-added"> {this.props.value} </p>
+      <input className="Review-button Review-confirm-button" value="Confirm" onClick={this.handleConfirm}/>
+      <input className="Review-button Review-edit-button" value="Edit" onClick={this.handleEdit}/>
     </div>
   );
   }

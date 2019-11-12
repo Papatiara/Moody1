@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import background from './moody.png';
 import './App.css';
-import Input from './Input';
+import Intro from './Intro';
 
 
 class App extends Component {
@@ -9,10 +9,10 @@ class App extends Component {
     return (
       <div>
         <div className="App-header">
-            <h3 className="App-title" onClick={() => window.location.reload(false)}> Moody</h3>
-            <h3 className="App-contact">Contact</h3>
-      </div>
-      <Input />
+          <h3 className="App-header-title" onClick={() => window.location.reload(false)}> Moody</h3>
+          <h3 className="App-header-contact-info">Contact</h3>
+        </div>
+        <Intro />
       </div>
     );
   }

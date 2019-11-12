@@ -47,7 +47,7 @@ hasData: true
     );
   }
   return (
-  <div className="lds-ring">
+  <div className="Request-loading-ring">
   <div>
   </div>
   <div></div>
