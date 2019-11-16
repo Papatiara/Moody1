@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  PieChart, Pie, Legend, Tooltip,
-} from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import App from './App';
 
 
@@ -14,10 +12,13 @@ class Charts  extends React.Component {
   render() {
     return (
     <div className="Charts-item">
-      <PieChart width={400} height={400}>
-        <Pie dataKey="value" isAnimationActive={false} data={this.props.data} cx={200} cy={200} outerRadius={80} fill="#8884d8" label />
+      <BarChart width={600} height={300} data={this.props.data}>
+        <XAxis dataKey="name" stroke="#8884d8" />
+        <YAxis />
         <Tooltip />
-      </PieChart>
+        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+        <Bar type="monotone" dataKey="value" fill="#8884d8" barSize={30} />
+      </BarChart>
       <input className="Charts-button" value="Try it again" onClick={() => window.location.reload(false)}/>
     </div>
     );

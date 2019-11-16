@@ -25,9 +25,9 @@ axios({
     .then((response)=>{
 	  let emotions = response.data.emotion_scores
 	  this.setState({data : [
-  { name: 'Joy', value: Math.ceil(emotions['joy']) }, { name: 'Disgust', value: Math.ceil(emotions['disgust']) },
-  { name: 'Sadness', value: Math.ceil(emotions['sadness']) }, { name: 'Anger', value: Math.ceil(emotions['anger']) },
-  { name: 'Surprise', value: Math.ceil(emotions['surprise']) }, { name: 'Fear', value: Math.ceil(emotions['fear']) },
+  { name: 'Joy', value: Math.ceil(emotions['joy']) * 1000}, { name: 'Disgust', value: Math.ceil(emotions['disgust'])  * 1000 },
+  { name: 'Sadness', value: Math.ceil(emotions['sadness'])  * 1000 }, { name: 'Anger', value: Math.ceil(emotions['anger'])  * 1000},
+  { name: 'Surprise', value: Math.ceil(emotions['surprise'])  * 1000 }, { name: 'Fear', value: Math.ceil(emotions['fear'])  * 1000},
 ],
 hasData: true
 })
