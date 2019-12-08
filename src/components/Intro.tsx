@@ -1,30 +1,29 @@
 /** @jsx jsx */
 
 import { css, keyframes, jsx } from '@emotion/core';
-import {RouteComponentProps, withRouter} from "react-router-dom";
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import TextAreaInput from './TextAreaInput';
 
 type Props = RouteComponentProps & {
-  textBlob: string,
-  setTextBlob: (value: string) => void,
-}
+  setTextBlob: (value: string) => void;
+};
 
-const Intro = ({history, textBlob, setTextBlob}:Props) => {
+const Intro = ({ history, setTextBlob }: Props) => {
   const handleSubmit = (value: string): void => {
     setTextBlob(value);
-    history.push('/review'); 
-  }
+    history.push('/review');
+  };
   return (
     <div css={styles.intro_content}>
-        <div css={styles.intro_description}>
+      <div css={styles.intro_description}>
         Moody is an interactive way to analyze sentiment behind text. Enter any text and try it out!
       </div>
-      <TextAreaInput initialValue={textBlob} onSubmit={handleSubmit} />
+      <TextAreaInput onSubmit={handleSubmit} />
     </div>
   );
 };
 
-const fadeText = keyframes ` {
+const fadeText = keyframes` {
   0% {
     color: #C7F0D8;
   }
@@ -39,7 +38,10 @@ const fadeText = keyframes ` {
 
 const styles = {
   intro_content: css`
+    position: fixed;
     text-align: center;
+    width: 50%;
+    height:100%;
   `,
   intro_description: css`
     position: fixed;

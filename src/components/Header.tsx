@@ -14,6 +14,7 @@ const Header = () => (
 
 const styles = {
   app_header: css`
+    position: non-static;
     background-color: #87d1a5;
     height: 40px;
     padding: 10px;

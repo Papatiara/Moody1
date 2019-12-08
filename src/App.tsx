@@ -5,8 +5,7 @@ import Header from './components/Header';
 import ReviewText from './components/ReviewText';
 import Request from './components/Request';
 import Charts from './components/Charts';
-import SentimentAnalysis from './domain/SentimentAnalysis'
-
+import SentimentAnalysis from './domain/SentimentAnalysis';
 
 const App = () => {
   const [textBlob, setTextBlob] = useState('');
@@ -20,13 +19,13 @@ const App = () => {
           <ReviewText value={textBlob} />
         </Route>
         <Route exact path="/">
-          <Intro textBlob={textBlob} setTextBlob={setTextBlob} />
+          <Intro setTextBlob={setTextBlob} />
         </Route>
         <Route path="/loading">
-          <Request finalValue={textBlob} setSentimentAnalysis={setSentimentAnalysis}  />
+          <Request finalValue={textBlob} setSentimentAnalysis={setSentimentAnalysis} />
         </Route>
         <Route path="/charts">
-          <Charts value={sentimentAnalysis} setTextBlob={setTextBlob}/>
+          <Charts value={sentimentAnalysis} setTextBlob={setTextBlob} />
         </Route>
       </Switch>
     </Router>
