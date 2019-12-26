@@ -21,8 +21,8 @@ const ReviewText = ({history, value}: Props)=> {
     <div>
       <h1 css={styles.review_input}> Please review your text: </h1>
       <p css={styles.review_value_added}> {value} </p>
-      <input css={styles.review_button} value="Confirm" onClick={handleConfirm} />
-      <input css={styles.review_button} value="Edit" onClick={handleEdit} />
+      <button css={styles.review_button} onClick={handleConfirm}> Confirm </button>
+      <button css={styles.review_button} onClick={handleEdit}> Edit </button>
     </div>
   );
 };
@@ -43,16 +43,14 @@ const styles = {
     margin-top: 5%;
   `,
   review_button: css`
-    border: 2px solid lightgray;
-    width: 50px;
-    left: 70px;
-    right: 30px;
+  {
+    cursor:pointer;
     margin-left: 20%;
-    cursor: pointer;
-    &:hover {
-      border: 2px inset lightgreen;
-      color: green;
-    }
+    user-select: none;
+    outline: none;
+    pointer-events: auto;
+    text-align: center;
+  }
   `,
 };
 

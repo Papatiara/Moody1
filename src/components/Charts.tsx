@@ -11,7 +11,7 @@ type Props = RouteComponentProps & {
   value: SentimentAnalysis[];
 };
 const Charts = ({ history, setTextBlob, value }: Props) => {
-  const tryItAgain = (event: React.MouseEvent<HTMLInputElement>): void => {
+  const tryItAgain = (): void => {
     setTextBlob('');
     history.push('/');
   };
@@ -25,7 +25,7 @@ const Charts = ({ history, setTextBlob, value }: Props) => {
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <Bar dataKey="value" fill="#8884d8" barSize={30} />
       </BarChart>
-      <input css={styles.charts_button} value="Try it again" onClick={tryItAgain} />{' '}
+      <button css={styles.charts_button} onClick={tryItAgain}> Try it again</button>
     </div>
   );
 };
@@ -38,7 +38,7 @@ const styles = {
   `,
   charts_button: css`
     border: 2px solid lightgray;
-    width: 65px;
+    width: 90px;
     left: 70px;
     right: 30px;
     margin-left: 20%;

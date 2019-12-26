@@ -16,7 +16,7 @@ const Loading = () => {
 const spin = keyframes`
     0% {
       transform: rotate(0deg);
-    }ß
+    }
     100% {
       transform: rotate(360deg);
     }
