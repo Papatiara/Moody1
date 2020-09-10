@@ -69,7 +69,7 @@ const styles = {
       font-family: Akkurat Std, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
         Cantarell, Helvetica Neue, sans-serif, Arial;
       -webkit-font-smoothing: antialiased;
-      font-size: 15px;
+      font-size: 2em;
       white-space: pre-wrap;
       word-wrap: break-word;
       word-break: break-word;
@@ -101,6 +101,9 @@ const styles = {
       outline: none;
       pointer-events: auto;
       text-align: center;
+      border-radius: 10%;
+      width: 60px;
+      height: 30px;
     }
   `,
 };

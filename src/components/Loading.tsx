@@ -24,20 +24,22 @@ const spin = keyframes`
 
 const styles = {
   loading_ring: css`
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-    margin-left: 33.33%;
-    margin-right: 33.33%;
-    margin-top: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
     & div {
-      box-sizing: border-box;
-      display: block;
+      // box-sizing: border-box;
+      // display: block;
       position: absolute;
+      margin-top: 50%;
       width: 51px;
       height: 51px;
-      margin: 6px;
-      border: 6px solid #fff;
+      // margin: 6px;
+      border: 8px solid black;
       border-radius: 50%;
       animation: ${spin} 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
       border-color: #dfc transparent transparent transparent;

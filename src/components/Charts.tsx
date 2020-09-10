@@ -18,7 +18,7 @@ const Charts = ({ history, setTextBlob, value }: Props) => {
 
   return (
     <div css={styles.charts_item}>
-      <BarChart width={600} height={300} data={value}>
+      <BarChart width={400} height={300} data={value}>
         <XAxis dataKey="name" stroke="#8884d8" />
         <YAxis />
         <Tooltip />
@@ -31,17 +31,15 @@ const Charts = ({ history, setTextBlob, value }: Props) => {
 };
 const styles = {
   charts_item: css`
-    margin-top: 10%;
-    margin-left: 33.33%;
-    margin-right: 33.33%;
-    top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
   `,
   charts_button: css`
-    border: 2px solid lightgray;
-    width: 90px;
-    left: 70px;
-    right: 30px;
-    margin-left: 20%;
+    border: 2px solid lightgrey;
     text-align: center;
     cursor: pointer;
     &:hover {

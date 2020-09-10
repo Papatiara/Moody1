@@ -38,8 +38,11 @@ const fadeText = keyframes` {
 
 const styles = {
   intro_content: css`
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
     clear: left;
     pointer-events:none;
     overflow: hidden;
@@ -50,7 +53,7 @@ const styles = {
     margin-right: 20%;
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2em;
     animation: ${fadeText} 5s ease infinite;
   `,
 };
